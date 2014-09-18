@@ -1,45 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- JQuery Mobile Links -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-
-        <title>Factorial Calculator</title>
+        <title></title>
     </head>
 
     <body>
 
-        <h1>Factorial Calculator</h1>
-        <img src="factorial.png">  <!-- image from http://www.calctool.org/CALC/math/functions/factorial.png -->
-
-        <input type="text" id="num" placeholder="enter a number" data-clear-btn="true"/>
-        <input type="submit" data-inline="true" value="Calculate" onclick="factorial()"/>
-
-        <h1 id="answer"></h1>
-
-        <p>by Sam Ward [sw167599]</p>
+        <h1>uppercase my text</h1>
+        <p></p>
+        <input type="text" id="myTextField" placeholder="enter text"/>
+        <input type="submit" id="byBtn" value="Enter" onclick="change()"/>
+        <p id="title"></p>
 
 
         <script>
-            function factorial(){
+            function change(){
 
-                var num = document.getElementById('num').value;
-
-                if( isNaN(num) ){
-                    var answer = document.getElementById('answer');
-                    answer.innerHTML = "Invalid Input";
-                }else {
-                    var product = 1;
-                    for (var i = 1; i <= num; i++) {
-                        product *= i;
-                    }
-
-                    var answer = document.getElementById('answer');
-                    answer.innerHTML = "Answer: " + product;
-                }
+                var myNewTitle = document.getElementById('myTextField').value;
+                var title = document.getElementById('title');
+                title.innerHTML = myNewTitle.toUpperCase();
             }
         </script>
 
