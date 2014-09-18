@@ -7,9 +7,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="apple-touch-icon" href="icon.png"/>
+        <link rel="apple-touch-icon" href="factorial1.gif"/>
 
-        <link rel="apple-touch-startup-image" href="todo.jpg" />
+        <link rel="apple-touch-startup-image" href="factorial1.gif" />
         <!--<link rel="stylesheet" href="tetris.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">-->
 
 
@@ -18,38 +18,37 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-        <title></title>
+        <title>Factorial Calculator</title>
     </head>
 
     <body>
 
-        <h1>The Title</h1>
+        <h1>Factorial Calculator</h1>
+        <img src="factorial.png">
+        <!-- image from http://www.calctool.org/CALC/math/functions/factorial.png -->
+        <input type="text" id="num" placeholder="enter a number" data-clear-btn="true"/>
+        <input type="submit" data-inline="true" value="Calculate" onclick="factorial()"/>
+        <h1 id="answer"></h1>
 
-        <input type="text" placeholder="enter some text">
-        <input type="submit" value="Enter">
-
-
-
-        <h1 id="title">Javascript callback example</h1>
-        <input type="text" id="myTextField"/>
-        <input type="submit" id="byBtn" value="Change" onclick="change()"/>
-        <img src="todo.jpg">
-
-
-        <p>By Sam Ward ID: sw167599</p>
+        <p>by Sam Ward [sw167599]</p>
 
         <script>
-            function change(){
+            function factorial(){
 
-                var myNewTitle = document.getElementById('myTextField').value;
-                if( myNewTitle.length==0 ){
-                    alert('Write Some real Text please.');
-                    return;
+                var num = document.getElementById('num').value;
+
+                if(isNaN(num)){
+                    var answer = document.getElementById('answer');
+                    answer.innerHTML = "Invalid Input";
+                }else {
+                    var product = 1;
+                    for (var i = 1; i <= num; i++) {
+                        product *= i;
+                    }
+
+                    var answer = document.getElementById('answer');
+                    answer.innerHTML = "Answer: " + product;
                 }
-
-                var title = document.getElementById('title');
-                title.innerHTML = myNewTitle;
-
             }
         </script>
 
