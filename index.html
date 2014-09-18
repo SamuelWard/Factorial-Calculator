@@ -1,6 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html manifest="tetris.manifest">
     <head>
+
+       <!--iPhone Test-->
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="apple-touch-icon" href="icon.png"/>
+
+        <link rel="apple-touch-startup-image" href="todo.jpg" />
+        <!--<link rel="stylesheet" href="tetris.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">-->
+
+
+        <!-- JQuery Mobile Test -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -9,18 +22,21 @@
     </head>
 
     <body>
-        <!--<img src="todo.jpg">-->
+
         <h1>The Title</h1>
 
         <input type="text" placeholder="enter some text">
         <input type="submit" value="Enter">
 
-        <p>By Sam Ward</p>
-        <p>ID: sw167599</p>
+
 
         <h1 id="title">Javascript callback example</h1>
         <input type="text" id="myTextField"/>
         <input type="submit" id="byBtn" value="Change" onclick="change()"/>
+        <img src="todo.jpg">
+
+
+        <p>By Sam Ward ID: sw167599</p>
 
         <script>
             function change(){
