@@ -1,55 +1,38 @@
 <!DOCTYPE html>
-<html manifest="factorial.manifest">
+<html>
     <head>
-<<<<<<< HEAD
-        <title></title>
-=======
-
-       <!--iPhone Test-->
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="apple-touch-icon" href="factorial_icon.png"/>
-
-
-        <!-- JQuery Mobile Test -->
+        <!-- JQuery Mobile Links -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-        <title>Factorials</title>
->>>>>>> parent of 24cf397... final code for homework 4
+
+        <link rel="stylesheet" href="main.css">
+        <title>Factorial Calculator</title>
     </head>
 
     <body>
+    <div id="background">
+        <div id="mid">
+            <h1>Factorial Calculator</h1>
+            <img src="factorial.png">  <!-- image from http://www.calctool.org/CALC/math/functions/factorial.png -->
 
-<<<<<<< HEAD
-        <h1>uppercase my text</h1>
-        <p></p>
-        <input type="text" id="myTextField" placeholder="enter text"/>
-        <input type="submit" id="byBtn" value="Enter" onclick="change()"/>
-        <p id="title"></p>
-=======
-        <h1>Factorial Calculator</h1>
-        <img src="factorial.png">
-        <!-- image from http://www.calctool.org/CALC/math/functions/factorial.png -->
-        <input type="text" id="num" placeholder="enter a number" data-clear-btn="true"/>
-        <input type="submit" data-inline="true" value="Calculate" onclick="factorial()"/>
-        <h1 id="answer"></h1>
+            <div class="inputs">
+                <input type="text" id="num" placeholder="enter a number" data-clear-btn="true"/>
+                <input type="submit" data-inline="true" value="Calculate" onclick="factorial()"/>
+            </div>
 
-        <p>by Sam Ward [sw167599]</p>
->>>>>>> parent of 24cf397... final code for homework 4
+            <h1 id="answer"></h1>
 
+            <p id="name">by Sam Ward [sw167599]</p>
+        </div>
+    </div>
         <script>
-<<<<<<< HEAD
-            function change(){
-=======
             function factorial(){
 
                 var num = document.getElementById('num').value;
 
-                if(isNaN(num)){
+                if( isNaN(num) ){
                     var answer = document.getElementById('answer');
                     answer.innerHTML = "Invalid Input";
                 }else {
@@ -57,11 +40,10 @@
                     for (var i = 1; i <= num; i++) {
                         product *= i;
                     }
->>>>>>> parent of 24cf397... final code for homework 4
 
-                var myNewTitle = document.getElementById('myTextField').value;
-                var title = document.getElementById('title');
-                title.innerHTML = myNewTitle.toUpperCase();
+                    var answer = document.getElementById('answer');
+                    answer.innerHTML = "Answer: " + product;
+                }
             }
         </script>
 
